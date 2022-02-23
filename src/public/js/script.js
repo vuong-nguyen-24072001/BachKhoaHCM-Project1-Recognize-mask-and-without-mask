@@ -27,7 +27,7 @@ console.log("script");
       newImage.naturalWidth == 150;
     console.log(isLoad);
     newImage.classList.add("mask-img");
-    // newImage.classList.add("hidden");
+    newImage.classList.add("hidden");
     trainImagesContainer.appendChild(newImage);
   }
 
@@ -40,7 +40,7 @@ console.log("script");
     newImage.setAttribute("width", "150px");
     newImage.setAttribute("height", "100px");
     newImage.classList.add("no-mask-img");
-    // newImage.classList.add("hidden");
+    newImage.classList.add("hidden");
     trainImagesContainer.appendChild(newImage);
   }
   await sleep(20000, "Loading and training model...");
@@ -179,7 +179,7 @@ console.log("script");
     var img = new Image();
     img.src = canvas.toDataURL();
     if (loadDataSet) return img.src;
-    // imageFace.classList.add("hidden");
+    imageFace.classList.add("hidden");
     imageFace.setAttribute("src", img.src);
     return canvas;
   }
