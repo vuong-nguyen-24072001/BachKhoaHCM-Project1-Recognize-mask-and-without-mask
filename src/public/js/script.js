@@ -43,6 +43,7 @@ console.log("script");
     // newImage.classList.add("hidden");
     trainImagesContainer.appendChild(newImage);
   }
+  await sleep(10000, "Loading and training model...");
   // // add incorrect mask to the dom and give them a class of "incorrect-mask-img"
   // for (let i = 1; i <= incorrectImageCount; i++) {
   //   const newImage = document.createElement("IMG");
@@ -181,5 +182,12 @@ console.log("script");
     // imageFace.classList.add("hidden");
     imageFace.setAttribute("src", img.src);
     return canvas;
+  }
+  function sleep(ms, context) {
+    return new Promise((resolve) => {
+      if (context) textResult.innerHTML = context;
+      console.log("sleep");
+      setTimeout(resolve, ms);
+    });
   }
 })();
