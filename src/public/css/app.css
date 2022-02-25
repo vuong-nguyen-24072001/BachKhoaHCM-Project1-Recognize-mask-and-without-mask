@@ -3,18 +3,6 @@
   transition: visibility 0s 2s, opacity 2s linear;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.container .container-result {
-  font-size: 25px;
-}
-
 .warning {
   color: red;
 }
@@ -45,4 +33,26 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.frame .frame-result {
+  font-size: 25px;
+}
+
+.navbar .navbar-infor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .navbar-infor .navbar-infor-item {
+  margin: 0 8px;
 }
