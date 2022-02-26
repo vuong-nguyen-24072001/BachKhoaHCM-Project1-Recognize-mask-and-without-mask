@@ -14,7 +14,10 @@ app.use(layout);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
-app.get("/", homeController.show);
+app.get("/", (req, res) => {
+  res.locals.port = port;
+  res.render("home/index");
+});
 app.post("/warning", (req, res) => {
   console.log(req.query.state);
   res.send("Data received from Nodejs");
