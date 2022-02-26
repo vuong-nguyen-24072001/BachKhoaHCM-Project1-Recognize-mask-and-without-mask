@@ -44,7 +44,7 @@ console.log("script");
     newImage.classList.add("hidden");
     trainImagesContainer.appendChild(newImage);
   }
-  // await sleep(20000, "Loading and training model...");
+  await sleep(20000, "Loading and training model...");
 
   // // add incorrect mask to the dom and give them a class of "incorrect-mask-img"
   // for (let i = 1; i <= incorrectImageCount; i++) {
