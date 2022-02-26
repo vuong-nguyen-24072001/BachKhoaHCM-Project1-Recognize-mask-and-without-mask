@@ -20,6 +20,7 @@ app.post("/warning", (req, res) => {
   res.send("Data received from Nodejs");
 });
 
+console.log(`porttttttttttttttt envvvvvvv: ${port}`);
 const server = app.listen(port, () =>
   console.log(`listening at http://localhost:${[port]}`)
 );
