@@ -10,6 +10,7 @@ console.log("script");
   const incorrectImageCount = 100;
   const trainImagesContainer = document.querySelector(".train-images");
   const textResult = document.getElementById("textResult");
+  const socket = io();
   loader.classList.add("show");
 
   // Load mobilenet module
@@ -111,10 +112,12 @@ console.log("script");
           textResult.classList.remove("active");
           textResult.classList.add("warning");
           textResult.innerHTML = "NO MASK";
+          socket.emit("infoMask", "no-mask");
         } else {
           textResult.classList.remove("warning");
           textResult.classList.add("active");
           textResult.innerHTML = "MASK";
+          socket.emit("infoMask", "mask");
         }
         console.log(results);
         results = [];

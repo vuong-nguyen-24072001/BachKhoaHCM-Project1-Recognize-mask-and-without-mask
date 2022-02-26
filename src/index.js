@@ -15,6 +15,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", homeController.show);
+app.post("/warning", (req, res) => {
+  console.log(req.query.state);
+  res.send("Data received from Nodejs");
+});
 
 const server = app.listen(port, () =>
   console.log(`listening at http://localhost:${[port]}`)
