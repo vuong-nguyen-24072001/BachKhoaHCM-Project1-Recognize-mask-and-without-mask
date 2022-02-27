@@ -5,6 +5,7 @@ const path = require("path");
 
 const homeController = require("./controllers/homeControllers");
 const notifyController = require("./controllers/notifyController");
+const apiController = require("./controllers/apiController");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
   res.locals.port = port;
   res.render("home/index");
 });
+app.get("/api", apiController.showTestIo);
 app.post("/warning", (req, res) => {
   console.log(req.query.state);
   res.send("Data received from Nodejs");
