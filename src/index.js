@@ -31,5 +31,9 @@ console.log(`porttttttttttttttt envvvvvvv: ${port}`);
 const server = app.listen(port, () =>
   console.log(`listening at http://localhost:${[port]}`)
 );
-const io = require("socket.io")(server);
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+  },
+});
 notifyController(io);
